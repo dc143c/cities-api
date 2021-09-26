@@ -20,6 +20,11 @@ UNITY podendo ser de três tipos:
 - KILOMETERS
 - MILES
 
+#Não sabe o id das cidades?
+Tudo bem! Buscando pela nossa API, por uma requisição de tipo GET pela URL:
+```https://dc143c-cities-api.herokuapp.com/api/v1/cities/name/{NOMECIDADE}```
+Onde o NOMECIDADE é parte do nome da cidade desejada, você encontra a cidade que quer!
+
 #Tecnologias aplicadas neste projeto
 -Java JDK11
 -Spring Boot Maven
