@@ -25,9 +25,19 @@ public class CityController {
         return cityRepository.findAll(page);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity getCitiesById(@PathVariable Long id){
+    @GetMapping("/id/{id}")
+    public ResponseEntity getCitiesById(@PathVariable(name = "id") Long id){
         Optional<City> foundCity = cityRepository.findById(id);
+        if(foundCity.isPresent()){
+            return ResponseEntity.ok().body(foundCity.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping("/name/{name}")
+    public ResponseEntity getCitiesByName(@PathVariable(name = "name") String name){
+        Optional<City> foundCity = cityRepository.findByName(name);
         if(foundCity.isPresent()){
             return ResponseEntity.ok().body(foundCity.get());
         } else {
