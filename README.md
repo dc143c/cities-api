@@ -4,7 +4,6 @@ Todos as cidades, estados de cada um dos países do mundo estão na nossa DB e o
 Além disso tambem podem ser feitos por outros métodos matemáticos como distância entre dois pontos ou de forma quadrática.
 
 #Como utilizar?
-
 Busca-se as cidades desejada pela lista e paginamento da nossa API por uma requisição GET na url:
 ```https://dc143c-cities-api.herokuapp.com/api/v1/cities```
 Obtendo as cidades pode-se entao calcular a distancia passando por parametros em uma requisição GET para a seguinte URL:
